@@ -1,0 +1,32 @@
+{
+  "name": "notion.auth.module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack server --mode development",
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.5",
+    "@types/chrome": "^0.0.241",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.4.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "webpack": "^5.86.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

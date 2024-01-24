@@ -1,0 +1,1 @@
+import { PROBLEM_NAME_CLASS, DIFFICULTY_CONTAINER_CLASS } from './constants';

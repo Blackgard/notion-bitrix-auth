@@ -1,0 +1,41 @@
+{
+    "name": "Notion Bitrix Auth",
+    "description": "Auth bitrix site from database with passwords",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icons/favicon-16x16.png",
+        "32": "icons/favicon-32x32.png",
+        "150": "icons/favicon-150x150.png"
+      },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://api.notion.com/v1/pages/",
+        "*://*/*"
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": "Ctrl+Shift+Y"
+        }
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab",
+        "cookies",
+        "storage"
+    ]
+}

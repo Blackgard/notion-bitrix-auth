@@ -1,0 +1,311 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat?styles=17402,17400,17403');
+
+body {
+    background: none;
+    min-width: 300px;
+    font-family: 'montserrat', sans-serif;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: none;
+}
+
+.nab-content {
+    position: relative;
+    width: 100%;
+    background: white;
+    /*box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.10);*/
+
+    box-sizing: border-box;
+}
+
+.nab-content .header {
+    background: #004ec4;
+    /*border-radius: 10px 10px 0 0 ;*/
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.nab-content .header .name {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nab-content .header .link {
+    display: flex;
+    flex-direction: row;
+    gap: 5px
+}
+
+.nab-content .header .link a {
+    display: flex;
+}
+
+.nab-content .tabs {
+    padding: 10px 15px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.nab-content .tabs .tab {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.nab-content .tabs .tab.active {
+    color: #004ec4;
+}
+
+.nab-content .tabs .tab:hover {
+    color: rgb(58, 58, 58);
+}
+
+.nab-content .tabs .tab.active:hover {
+    color: #de494e;
+}
+
+.nab-content .logs-input {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid rgb(58, 58, 58);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.nab-content .content {
+    padding: 15px;
+}
+
+.nab-content .content .site-content {
+    position: relative;
+}
+
+.nab-content .content .site-content .row {
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 1px solid #d2d2d2;
+
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.nab-content .content .site-content .row:last-child {
+    margin-bottom: 0;
+}
+
+.nab-content .content .site-content .row .title {
+    width: 40%;
+    margin-right: 8px;
+}
+
+.nab-content .content .site-content .row .data {
+    width: calc(60% - 8px);
+
+    display: flex;
+    align-items: center;
+}
+
+.nab-content .content .site-content .row .data .e,
+.nab-content .content .site-content .row .data .s {
+    display: block;
+
+    height: 8px;
+    width: 8px;
+
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.nab-content .content .site-content .row .data .e {
+    background-color: red;
+}
+
+.nab-content .content .site-content .row .data .s {
+    background-color: green;
+}
+
+.nab-content h2 {
+    font-size: 16px;
+}
+
+.nab-content .actions {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.nab-content .btn {
+    font-family: 'JetBrains Mono', sans-serif;
+
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    background: #004ec4;
+    border-radius: 6px;
+    color: white;
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
+    white-space: nowrap;
+    cursor: pointer;
+
+    padding: 10px 60px;
+}
+
+.nab-content .btn:hover {
+    transform: translate(0, -2px);
+    box-shadow: 0 10px 20px -5px #004ec40c;
+}
+
+.nab-content .btn.btn--squard {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.nab-content .btn.btn--squard svg {
+    width: 100%;
+    height: 100%;
+}
+
+.nab-content .loading {
+    text-align: center;
+}
+
+.nab-content .errors {
+    color: #ff3333;
+    margin-bottom: 20px;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 40px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #004ec4;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.input-password {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.input-password input{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    flex: 1;
+    margin-left: 15px;
+}
+
+.input-password .icon.icon--password {
+    width: 14px;
+    height: 14px;
+
+    transition: color .3s ease;
+    cursor: pointer;
+}
+
+.input-password .icon.icon--password:hover {
+    color: #004ec4;
+}
+
+#notion-auth-domain-login-wrapper,
+#notion-auth-domain-password-wrapper {
+    display: none;
+    position: relative;
+}
+
+#notion-auth-domain-login-wrapper.show,
+#notion-auth-domain-password-wrapper.show {
+    display: flex;
+}
+
+.data.copy {
+    cursor: pointer;
+}
